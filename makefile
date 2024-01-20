@@ -19,7 +19,7 @@ CPPFLAGS    += $(foreach lib, $(LIBS_NAME), -I $(LIB_PATH)/$(LIB_PATH)$(lib)/inc
 
 
 AR          := ar
-ARFLAGS     := -r -c -s -v
+ARFLAGS     := -r -c -s -v -T
 
 RM          := rm -f
 DIR_DUP     = mkdir -p $(@D)
@@ -31,7 +31,7 @@ all: $(LIBRARIES) $(NAME)
 
 $(NAME): $(OBJS)
 	$(info Making static library : $@)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS) $(LIBRARIES)
 
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
