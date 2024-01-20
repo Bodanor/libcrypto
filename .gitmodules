@@ -1,0 +1,3 @@
+[submodule "lib/libhexutil"]
+	path = lib/libhexutil
+	url = git@github.com:bodanor/libhexutil
