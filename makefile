@@ -1,4 +1,4 @@
-NAME        := libcryptoutil.a
+NAME        := libcrypto.a
 
 SRC_DIR     := src
 SRCS        := $(wildcard $(SRC_DIR)/**/*.c)
